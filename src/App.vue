@@ -1,11 +1,30 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <el-container class="app-container">
+    <el-header class="el-header">
+      <IndexHeader />
+    </el-header>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+  </el-container>
 </template>
 
-<style scoped></style>
+<script lang="js" setup>
+import IndexHeader from './components/indexHeader.vue'
+</script>
+<style scoped>
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+:deep(.el-header) {
+  padding: 0px;
+  height: 60px;
+}
+:deep(.el-main) {
+  padding: 0px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+</style>

@@ -1,0 +1,374 @@
+#loading-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 11;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  div.loading {
+    z-index: 11;
+    top: 125px;
+    left: 800px;
+    position: absolute;
+    width: 500px;
+    border: 1px solid gray;
+    box-shadow:
+      0 4px #666,
+      inset 0 4px #aaa,
+      0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    div.logoAndname {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      div.logo {
+        width: 55px;
+        height: 50px;
+        background-image: url(../img/logo.png);
+        background-size: contain;
+      }
+      div.name {
+        font-size: larger;
+        font-weight: bolder;
+      }
+    }
+    div.discription {
+      display: flex;
+      justify-content: center;
+      font-weight: lighter;
+    }
+    div.numberAndphone {
+      display: flex;
+      justify-content: space-around;
+      font-size: large;
+      transition: all 0.5s ease-in;
+      div.number {
+        margin: 10px;
+        border: 4px solid rgba(255, 255, 255, 0);
+        cursor: pointer;
+        &:hover {
+          border-bottom: 4px solid #0e86ff;
+        }
+      }
+      div.phone {
+        cursor: pointer;
+        margin: 10px;
+        border: 4px solid white;
+        &:hover {
+          border-bottom: 4px solid #0e86ff;
+        }
+      }
+    }
+    div.userAndpassword {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        width: 70%;
+        height: 40px;
+        margin-bottom: 15px;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+    div.autoLdAndforget {
+      display: flex;
+      justify-content: space-around;
+      cursor: pointer;
+      div.forget {
+        a {
+          text-decoration: none;
+          color: #0e86ff;
+        }
+      }
+    }
+    div.enter-wrapper {
+      //border: 4px solid red;
+      display: flex;
+      justify-content: center;
+      div.enter {
+        cursor: pointer;
+        //border: 4px solid red;
+        background-color: #0e86ff;
+        width: 70%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        color: white;
+        align-items: center;
+        margin-top: 0px;
+        &:hover {
+          color: #afadad;
+          background-color: #0c69c6;
+        }
+      }
+    }
+    div.otherLd-img-Regisiter {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+      cursor: pointer;
+      div.otherLd {
+        flex: 1 1 100px;
+      }
+      div.img {
+        flex: 3 1 200px;
+        display: flex;
+        justify-content: space-around;
+        font-size: larger;
+        color: #4e4d4d;
+        i.fa-youtube {
+          color: red;
+        }
+      }
+      div.Register {
+        flex: 1 1 50px;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  div.items {
+    display: flex;
+    margin-top: 500px;
+    div.item1 {
+      padding-right: 10px;
+    }
+    div.item2 {
+      padding-right: 10px;
+    }
+    div.item3 {
+      padding-right: 10px;
+    }
+    div.copyRight1 {
+      top: 200px;
+      font-size: large;
+      font-weight: bold;
+    }
+  }
+  div.mainImg {
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 60px;
+      left: 220px;
+      z-index: 1;
+    }
+  }
+  div.return {
+    position: absolute;
+    top: 30px;
+    left: 1400px;
+    font-size: 45px;
+    cursor: pointer;
+  }
+}
+#loading-phone {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 11;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  div.loading-phone {
+    z-index: 11;
+    top: 125px;
+    left: 800px;
+    position: absolute;
+    width: 500px;
+    border: 1px solid gray;
+    box-shadow:
+      0 4px #666,
+      inset 0 4px #aaa,
+      0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    div.logoAndname {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      div.logo {
+        width: 55px;
+        height: 50px;
+        background-image: url(../img/logo.png);
+        background-size: contain;
+      }
+      div.name {
+        font-size: larger;
+        font-weight: bolder;
+      }
+    }
+    div.discription {
+      display: flex;
+      justify-content: center;
+      font-weight: lighter;
+    }
+    div.numberAndphone {
+      display: flex;
+      justify-content: space-around;
+      font-size: large;
+      transition: all 0.5s ease-in;
+      div.number {
+        margin: 10px;
+        border: 4px solid rgba(255, 255, 255, 0);
+        cursor: pointer;
+        &:hover {
+          border-bottom: 4px solid #0e86ff;
+        }
+      }
+      div.phone {
+        cursor: pointer;
+        margin: 10px;
+        border: 4px solid white;
+        &:hover {
+          border-bottom: 4px solid #0e86ff;
+        }
+      }
+    }
+    div.userAndpassword {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        width: 70%;
+        height: 40px;
+        margin-bottom: 15px;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+      div.send {
+        width: 30%;
+        height: 40px;
+        //border: 2px solid red;
+        position: absolute;
+        top: 193px;
+        left: 275px;
+        color: white;
+        background-color: #aaaaaa7c;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        &:hover {
+          background-color: #aaaaaa;
+        }
+      }
+    }
+    div.autoLdAndforget {
+      display: flex;
+      justify-content: space-around;
+      cursor: pointer;
+      div.forget {
+        a {
+          text-decoration: none;
+          color: #0e86ff;
+        }
+      }
+    }
+    div.enter-wrapper {
+      //border: 4px solid red;
+      display: flex;
+      justify-content: center;
+      div.enter {
+        cursor: pointer;
+        //border: 4px solid red;
+        background-color: #0e86ff;
+        width: 70%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        color: white;
+        align-items: center;
+        margin-top: 0px;
+        &:hover {
+          color: #afadad;
+          background-color: #0c69c6;
+        }
+      }
+    }
+    div.otherLd-img-Regisiter {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+      cursor: pointer;
+      div.otherLd {
+        flex: 1 1 100px;
+      }
+      div.img {
+        flex: 3 1 200px;
+        display: flex;
+        justify-content: space-around;
+        font-size: larger;
+        color: #4e4d4d;
+        i.fa-youtube {
+          color: red;
+        }
+      }
+      div.Register {
+        flex: 1 1 50px;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  div.items {
+    display: flex;
+    margin-top: 500px;
+    div.item1 {
+      padding-right: 10px;
+    }
+    div.item2 {
+      padding-right: 10px;
+    }
+    div.item3 {
+      padding-right: 10px;
+    }
+    div.copyRight1 {
+      top: 200px;
+      font-size: large;
+      font-weight: bold;
+    }
+  }
+  div.mainImg {
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 60px;
+      left: 220px;
+      z-index: 1;
+    }
+  }
+  div.return {
+    position: absolute;
+    top: 30px;
+    left: 1400px;
+    font-size: 45px;
+    cursor: pointer;
+  }
+}
