@@ -1,0 +1,11 @@
+main {
+  width: 100%;
+}
+main section.wrapper {
+  width: 100%;
+}
+main section.wrapper iframe {
+  width: 100%;
+  display: inline-block;
+  height: 100vh;
+}/*# sourceMappingURL=apiDocument.css.map */

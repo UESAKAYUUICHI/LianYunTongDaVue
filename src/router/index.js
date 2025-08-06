@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('@/view/front/productService.vue'),
     },
     {
+      path: '/apiDocument',
+      name: 'apiDocument',
+      component: () => import('@/view/front/apiDocument.vue'),
+    },
+    {
       path: '/',
       redirect: '/index',
     },

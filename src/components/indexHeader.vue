@@ -20,7 +20,7 @@
     </div>
     <el-menu-item index="/index">首页</el-menu-item>
     <el-menu-item index="/productService">产品服务</el-menu-item>
-    <el-menu-item index="3">接口API</el-menu-item>
+    <el-menu-item index="/apiDocument">接口API</el-menu-item>
     <el-menu-item index="6">大屏展示</el-menu-item>
     <el-menu-item index="4">关于我们</el-menu-item>
     <div class="phone">
