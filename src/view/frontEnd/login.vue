@@ -66,6 +66,7 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import { jumpToBackHome } from '../../../public/javascript/routerToJump'
 
 import computerIcon from '/png/computer.png'
 import qrcodeIcon from '/png/qrcode.png'
@@ -81,8 +82,9 @@ const changeLoginType = () => {
 }
 
 function sendLogin() {
-  console.log('测试登录点击,传的值为' + loginForm.username + loginForm.password)
-  alert('登录成功')
+  // console.log('测试登录点击,传的值为' + loginForm.username + loginForm.password)
+  // alert('登录成功')
+  jumpToBackHome()
 }
 </script>
 

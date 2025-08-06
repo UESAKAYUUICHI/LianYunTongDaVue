@@ -6,32 +6,48 @@ const router = createRouter({
     {
       path: '/index',
       name: 'index',
-      component: () => import('@/view/front/index.vue'),
+      component: () => import('@/view/frontEnd/index.vue'),
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/view/front/login.vue'),
+      component: () => import('@/view/frontEnd/login.vue'),
     },
     {
       path: '/register',
       name: 'register',
-      component: () => import('@/view/front/register.vue'),
+      component: () => import('@/view/frontEnd/register.vue'),
     },
     {
       path: '/productService',
       name: 'productService',
-      component: () => import('@/view/front/productService.vue'),
+      component: () => import('@/view/frontEnd/productService.vue'),
     },
     {
       path: '/apiDocument',
       name: 'apiDocument',
-      component: () => import('@/view/front/apiDocument.vue'),
+      component: () => import('@/view/frontEnd/apiDocument.vue'),
     },
     {
       path: '/aboutUs',
       name: 'aboutUs',
-      component: () => import('@/view/front/aboutUs.vue'),
+      component: () => import('@/view/frontEnd/aboutUs.vue'),
+    },
+    {
+      path: '/backHome',
+      name: 'backHome',
+      component: () => import('@/view/backEnd/backHome.vue'),
+      children: [
+        {
+          path: '/cargoMg',
+          name: 'cargoMg',
+          component: () => import('@/view/backEnd/cargoMg.vue'),
+        },
+        {
+          path: '/',
+          redirect: '/cargoMg',
+        },
+      ],
     },
     {
       path: '/',
