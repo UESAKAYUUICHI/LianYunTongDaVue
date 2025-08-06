@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('@/view/front/register.vue'),
     },
     {
+      path: '/productService',
+      name: 'productService',
+      component: () => import('@/view/front/productService.vue'),
+    },
+    {
       path: '/',
       redirect: '/index',
     },

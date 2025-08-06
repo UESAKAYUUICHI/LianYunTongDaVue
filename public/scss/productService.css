@@ -1,0 +1,296 @@
+main div.mian-part div.part1 {
+  width: 100%;
+  height: 400px;
+  background-image: url(../img/pro-ser-bg.png);
+  background-size: contain;
+}
+main div.mian-part div.part1 div.info {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+main div.mian-part div.part1 div.info div.h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+}
+main div.mian-part div.part1 div.info div.p {
+  color: white;
+  margin-left: 20px;
+}
+main div.mian-part div.part1 div.info div.enterbtn {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border: 1px solid white;
+  color: white;
+}
+main div.mian-part div.part1 div.info div.enterbtn:hover {
+  background-color: #0c69c6;
+  border: 1px solid #0c69c6;
+  color: rgb(218, 216, 216);
+}
+main div.mian-part div.part2 {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(244, 241, 241);
+}
+main div.mian-part div.part2 div.row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part2 div.row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part2 div.infobox {
+  border: 8px solid rgb(244, 241, 241);
+  margin-top: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+}
+main div.mian-part div.part2 div.infobox div.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+main div.mian-part div.part2 div.infobox div.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 10px;
+}
+main div.mian-part div.part2 div.infobox div.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  font-weight: lighter;
+  margin: 5px;
+}
+main div.mian-part div.part2 div.infobox div.Watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+main div.mian-part div.part2 div.infobox div.Watch p {
+  display: block;
+  font-size: medium;
+  border: 1px solid rgb(181, 180, 180);
+  width: 80%;
+  text-align: center;
+}
+main div.mian-part div.part2 div.infobox div.Watch p:hover {
+  background-color: #0c69c6;
+  border: 1px solid #0c69c6;
+  color: rgb(218, 216, 216);
+}
+main div.mian-part div.part2 div.infobox:hover {
+  transition: all ease 0.2s;
+  border: 8px solid white;
+}
+main div.mian-part div.part3 {
+  width: 100%;
+  height: 1100px;
+  background-color: white;
+}
+main div.mian-part div.part3 div.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  margin-top: 60px;
+}
+main div.mian-part div.part3 div.section1 {
+  display: flex;
+  margin-top: 75px;
+  margin-left: 300px;
+}
+main div.mian-part div.part3 div.section1 h2 {
+  font-weight: lighter;
+}
+main div.mian-part div.part3 div.section1 p {
+  color: gray;
+}
+main div.mian-part div.part3 div.section2 {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+main div.mian-part div.part3 div.section2 div.info {
+  margin-left: 50px;
+}
+main div.mian-part div.part3 div.section2 h2 {
+  font-weight: lighter;
+}
+main div.mian-part div.part3 div.section2 p {
+  color: gray;
+}
+main div.mian-part div.part4 {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(244, 241, 241);
+}
+main div.mian-part div.part4 div.h1 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part4 div.h1 p {
+  font-size: 30px;
+  font-weight: normal;
+}
+main div.mian-part div.part4 div.info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part4 div.info-wrapper div.info {
+  margin-left: 20px;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  border: 4px solid gray;
+}
+main div.mian-part div.part4 div.info-wrapper div.info div.maru {
+  position: absolute;
+  top: -27px;
+  left: 70px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+main div.mian-part div.part4 div.info-wrapper div.info div.maru p {
+  margin-left: 8px;
+  margin-top: -8px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #0e86ff;
+}
+main div.mian-part div.part4 div.info-wrapper div.info p.p {
+  position: absolute;
+  top: 35px;
+  left: 45px;
+  font-size: 20px;
+  font-weight: bold;
+}
+main div.mian-part div.part4 div.introduce {
+  margin-top: 30px;
+  text-align: center;
+}
+main div.mian-part div.part4 div.btn {
+  margin-left: 700px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  width: 10%;
+}
+main div.mian-part div.part4 div.btn:hover {
+  background-color: #0c69c6;
+  border: 1px solid #0c69c6;
+  color: rgb(218, 216, 216);
+}
+main div.mian-part div.part4 div.btn p {
+  display: block;
+  padding-top: 8px;
+}
+main div.mian-part div.part5 {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/home-register.png);
+  background-size: contain;
+}
+main div.mian-part div.part5 div.h1 {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part5 div.h1 p {
+  color: white;
+}
+main div.mian-part div.part5 div.info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mian-part div.part5 div.info-wrapper div.info {
+  padding-left: 20px;
+}
+main div.mian-part div.part5 div.info-wrapper div.info img {
+  margin-bottom: 5px;
+}
+main div.mian-part div.part5 div.info-wrapper div.info p {
+  color: white;
+}
+main div.mian-part div.part5 div.info-wrapper div.info p.p {
+  color: white;
+  position: relative;
+  left: -50px;
+  top: -10px;
+}
+main div.mian-part div.part6 {
+  width: 100%;
+  height: 100px;
+  background-color: #2e3034;
+}
+main div.mian-part div.part6 div.info-wrapper {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+main div.mian-part div.part6 div.info-wrapper div.info {
+  display: flex;
+  align-items: center;
+}
+main div.mian-part div.part6 div.info-wrapper div.info h2,
+main div.mian-part div.part6 div.info-wrapper div.info h4 {
+  margin-left: 20px;
+  font-size: medium;
+  color: #999;
+}
+main div.mian-part div.part6 div.info-wrapper div.info h2 {
+  font-size: 25px;
+}
+main div.mian-part div.part7 {
+  width: 100%;
+  height: 500px;
+  background-color: #242b3a;
+}
+main div.mian-part div.part7 div.info-wrapper {
+  display: flex;
+  justify-content: center;
+}
+main div.mian-part div.part7 div.info-wrapper div.info {
+  margin-top: 30px;
+  margin-left: 30px;
+  border-right: 2px solid #999;
+  padding-right: 30px;
+}
+main div.mian-part div.part7 div.info-wrapper div.info h3 {
+  margin-top: 30px;
+  color: white;
+}
+main div.mian-part div.part7 div.info-wrapper div.info p {
+  margin-top: 15px;
+  color: #999;
+}/*# sourceMappingURL=productService.css.map */

@@ -19,13 +19,17 @@
       <h2 style="color: white; font-size: 30px">联运通达</h2>
     </div>
     <el-menu-item index="/index">首页</el-menu-item>
-    <el-menu-item index="2">产品服务</el-menu-item>
+    <el-menu-item index="/productService">产品服务</el-menu-item>
     <el-menu-item index="3">接口API</el-menu-item>
+    <el-menu-item index="6">大屏展示</el-menu-item>
     <el-menu-item index="4">关于我们</el-menu-item>
-    <el-menu-item index="5">物流开放平台</el-menu-item>
-    <div class="phone">联系电话 500-345623</div>
+    <div class="phone">
+      <el-icon><Phone /></el-icon>联系电话 500-345623
+    </div>
 
-    <el-button @click="jumpToLogin" class="login" type="text">登录</el-button>
+    <el-button @click="jumpToLogin" class="login" type="text"
+      ><el-icon><UserFilled /></el-icon>登录</el-button
+    >
 
     <el-button @click="jumpToRegister" class="register" type="primary">免费注册</el-button>
   </el-menu>

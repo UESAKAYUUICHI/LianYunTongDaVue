@@ -1,4 +1,4 @@
-<template>
+<template class="body">
   <main>
     <div class="main-part">
       <div class="main">

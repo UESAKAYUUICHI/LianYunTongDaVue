@@ -1,4 +1,4 @@
-<template>
+<template class="body">
   <!-- 仿制飞书的登录页面 -->
   <div class="bg-container">
     <el-card class="login-card">
@@ -81,16 +81,17 @@ const changeLoginType = () => {
 }
 
 function sendLogin() {
-  console.log(loginForm)
+  console.log('测试登录点击,传的值为' + loginForm.username + loginForm.password)
+  alert('登录成功')
 }
 </script>
 
 <style lang="scss" scoped>
 .bg-container {
   width: 100%;
-  background-image: url(../../../public/img/loadingIMG.jpg);
+  background-image: url(../../../public/img/loginBg.jpg);
   height: 100vh;
-  background-size: 100% 95%;
+  background-size: 100% 110%;
 }
 .login-card {
   margin: 0 auto;
