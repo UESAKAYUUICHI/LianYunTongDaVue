@@ -29,6 +29,11 @@ const router = createRouter({
       component: () => import('@/view/front/apiDocument.vue'),
     },
     {
+      path: '/aboutUs',
+      name: 'aboutUs',
+      component: () => import('@/view/front/aboutUs.vue'),
+    },
+    {
       path: '/',
       redirect: '/index',
     },

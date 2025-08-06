@@ -22,7 +22,8 @@
     <el-menu-item index="/productService">产品服务</el-menu-item>
     <el-menu-item index="/apiDocument">接口API</el-menu-item>
     <el-menu-item index="6">大屏展示</el-menu-item>
-    <el-menu-item index="4">关于我们</el-menu-item>
+    <el-menu-item index="/aboutUs">关于我们</el-menu-item>
+
     <div class="phone">
       <el-icon><Phone /></el-icon>联系电话 500-345623
     </div>

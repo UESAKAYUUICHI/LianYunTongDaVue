@@ -16,6 +16,7 @@ import { watch, ref } from 'vue'
 
 // 创建响应式变量跟踪是否为产品服务页面
 const isProductService = ref(false)
+const isAboutUs = ref(false)
 const route = useRoute()
 
 // 监听路由变化
@@ -24,8 +25,12 @@ watch(
   (newPath) => {
     // 匹配路径是否为产品服务页面
     isProductService.value = newPath === '/productService'
-    // 同时控制body滚动
+    // 匹配路径是否为关于我们页面
+    isAboutUs.value = newPath === '/aboutUs'
+    // 控制产品服务页面移动
     document.body.style.overflow = isProductService.value ? 'auto' : 'hidden'
+    // 控制关于我们页面移动
+    document.body.style.overflow = isAboutUs.value ? 'auto' : 'hidden'
   },
   { immediate: true },
 )
