@@ -83,6 +83,46 @@ const router = createRouter({
           name: '/inventoryMg',
           component: () => import('@/view/backEnd/inventoryMg.vue'),
         },
+        {
+          path: '/inboundOrderMg',
+          name: '/inboundOrderMg',
+          component: () => import('@/view/backEnd/inboundOrderMg.vue'),
+        },
+        {
+          path: '/supplierMg',
+          name: '/supplierMg',
+          component: () => import('@/view/backEnd/supplierMg.vue'),
+        },
+        {
+          path: '/inboundInfoMg',
+          name: '/inboundInfoMg',
+          component: () => import('@/view/backEnd/inboundInfoMg.vue'),
+        },
+        {
+          path: '/outboundOrderMg',
+          name: '/outboundOrderMg',
+          component: () => import('@/view/backEnd/outboundOrderMg.vue'),
+        },
+        {
+          path: '/outboundInfoMg',
+          name: '/outboundInfoMg',
+          component: () => import('@/view/backEnd/outboundInfoMg.vue'),
+        },
+        {
+          path: '/vehicleTransportMg',
+          name: '/vehicleTransportMg',
+          component: () => import('@/view/backEnd/vehicleTransportMg.vue'),
+        },
+        {
+          path: '/logisticsMg',
+          name: '/logisticsMg',
+          component: () => import('@/view/backEnd/logisticsMg.vue'),
+        },
+        {
+          path: '/vehicleMg',
+          name: '/vehicleMg',
+          component: () => import('@/view/backEnd/vehicleMg.vue'),
+        },
       ],
     },
     {

@@ -43,7 +43,7 @@
                 </template>
                 <el-menu-item-group title="存储全系统通用的基础信息">
                   <el-menu-item index="/cargoCategoryMg">货物分类表</el-menu-item>
-                  <el-menu-item index="">供应商表</el-menu-item>
+                  <el-menu-item index="/supplierMg">供应商表</el-menu-item>
                   <el-menu-item index="/employeeMg">员工表</el-menu-item>
                 </el-menu-item-group>
               </el-sub-menu>
@@ -66,10 +66,10 @@
                 <el-menu-item-group title="负责货物的存储、出入库操作及库存变动记录">
                   <el-menu-item index="/housewaveMg">仓库表</el-menu-item>
                   <el-menu-item index="/inventoryMg">库存表</el-menu-item>
-                  <el-menu-item index="">入库单表</el-menu-item>
-                  <el-menu-item index="">入库明细表</el-menu-item>
-                  <el-menu-item index="">出库单表</el-menu-item>
-                  <el-menu-item index="">出库明细表</el-menu-item>
+                  <el-menu-item index="/inboundOrderMg">入库单表</el-menu-item>
+                  <el-menu-item index="/inboundInfoMg">入库明细表</el-menu-item>
+                  <el-menu-item index="/outboundOrderMg">出库单表</el-menu-item>
+                  <el-menu-item index="/outboundInfoMg">出库明细表</el-menu-item>
                 </el-menu-item-group>
               </el-sub-menu>
 
@@ -90,9 +90,9 @@
                   <span>运输管理</span>
                 </template>
                 <el-menu-item-group title="管理运输车辆、运输记录及相关信息">
-                  <el-menu-item index="">车辆表</el-menu-item>
-                  <el-menu-item index="">物流表</el-menu-item>
-                  <el-menu-item index="">车辆运输记录表</el-menu-item>
+                  <el-menu-item index="/vehicleMg">车辆表</el-menu-item>
+                  <el-menu-item index="/logisticsMg">物流表</el-menu-item>
+                  <el-menu-item index="/vehicleTransportMg">车辆运输记录表</el-menu-item>
                 </el-menu-item-group>
               </el-sub-menu>
 
@@ -112,7 +112,7 @@
           </el-col>
         </el-row></el-aside
       >
-      <el-main>
+      <el-main style="position: relative; top: -1px">
         <router-view></router-view>
       </el-main>
     </el-container>
