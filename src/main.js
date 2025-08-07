@@ -10,6 +10,8 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 //导入elementPlus的图标
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+// 导入echarts并注册为全局属性
+import * as echarts from 'echarts'
 
 import App from './App.vue'
 import router from './router'

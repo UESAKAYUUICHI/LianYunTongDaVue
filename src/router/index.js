@@ -44,6 +44,11 @@ const router = createRouter({
       component: () => import('@/view/backEnd/backHome.vue'),
       children: [
         {
+          path: '/dataCenter',
+          name: 'dataCenter',
+          component: () => import('@/view/backEnd/dataCenter.vue'),
+        },
+        {
           path: '/cargoMg',
           name: 'cargoMg',
           component: () => import('@/view/backEnd/cargoMg.vue'),
@@ -122,6 +127,10 @@ const router = createRouter({
           path: '/vehicleMg',
           name: '/vehicleMg',
           component: () => import('@/view/backEnd/vehicleMg.vue'),
+        },
+        {
+          path: '/backHome',
+          redirect: '/dataCenter',
         },
       ],
     },
