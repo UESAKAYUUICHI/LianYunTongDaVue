@@ -63,6 +63,10 @@
       <!-- 白色遮挡 -->
       <div class="white-cover"></div>
     </el-card>
+    <div class="box">
+      <div class="first">至诚 志专 致远</div>
+      <div class="second">行天下长久远</div>
+    </div>
   </div>
 </template>
 
@@ -91,7 +95,7 @@ function sendRegister() {
 <style lang="scss" scoped>
 .bg-container {
   width: 100%;
-  background-image: url(../../../public/img/loginBg.jpg);
+  background-image: url(../../../public/img/loginBackground.jpg);
   height: 100vh;
   background-size: 100% 110%;
 }
@@ -169,5 +173,28 @@ function sendRegister() {
   height: 44px;
   font-size: 16px;
   border-radius: 6px;
+}
+
+.box {
+  width: 1000px;
+  margin: 150px auto;
+  .first {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 250px;
+
+    font-weight: bold;
+  }
+  .second {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-weight: bold;
+  }
 }
 </style>

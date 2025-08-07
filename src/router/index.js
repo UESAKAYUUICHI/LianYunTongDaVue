@@ -43,10 +43,6 @@ const router = createRouter({
           name: 'cargoMg',
           component: () => import('@/view/backEnd/cargoMg.vue'),
         },
-        {
-          path: '/',
-          redirect: '/cargoMg',
-        },
       ],
     },
     {
