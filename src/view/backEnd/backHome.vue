@@ -79,8 +79,8 @@
                   <span>订单管理</span>
                 </template>
                 <el-menu-item-group title="管理订单的变动记录及订单的明细信息">
-                  <el-menu-item index="">订单主表</el-menu-item>
-                  <el-menu-item index="">订单明细表</el-menu-item>
+                  <el-menu-item index="/orderMg">订单主表</el-menu-item>
+                  <el-menu-item index="/orderInfoMg">订单明细表</el-menu-item>
                 </el-menu-item-group>
               </el-sub-menu>
 

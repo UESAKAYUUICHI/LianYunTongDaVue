@@ -3,37 +3,24 @@
     <!-- 搜索区域 -->
     <div class="search-bar">
       <div class="search-group">
-        <el-input
-          v-model="searchOrderId"
-          placeholder="订单ID精确查询（如O001）"
-          class="search-input"
-        />
-        <el-input v-model="searchUserId" placeholder="用户ID查询" class="search-input" />
+        <el-input v-model="searchOrderId" placeholder="订单ID查询" class="search-input" />
+        <el-input v-model="searchGoodsId" placeholder="商品ID查询" class="search-input" />
       </div>
       <div class="button-group">
         <el-button type="primary" class="action-btn" @click="fetchData">查询</el-button>
         <el-button class="action-btn" @click="handleReset">重置</el-button>
-        <el-button type="success" class="action-btn" @click="handleAdd">新增订单</el-button>
+        <el-button type="success" class="action-btn" @click="handleAdd">新增明细</el-button>
       </div>
     </div>
 
     <!-- 表格区域 -->
     <el-table :data="paginatedData" class="modern-table" style="width: 100%">
+      <el-table-column label="明细ID" prop="item_id" align="center" />
       <el-table-column label="订单ID" prop="order_id" align="center" />
-      <el-table-column label="用户ID" prop="user_id" align="center" />
-      <el-table-column label="订单创建时间" prop="order_time" align="center" />
-      <el-table-column label="订单状态" prop="status" align="center">
-        <template #default="scope">
-          <el-tag :type="getStatusTagType(scope.row.status)" size="small">
-            {{ scope.row.status }}
-          </el-tag>
-        </template>
-      </el-table-column>
-      <el-table-column label="支付方式" prop="pay_method" align="center" />
-      <el-table-column label="订单金额" prop="total_amount" align="center" />
-      <el-table-column label="收货人" prop="receive_name" align="center" />
-      <el-table-column label="联系电话" prop="receive_phone" align="center" />
-      <el-table-column label="收货地址" prop="receive_address" align="center" />
+      <el-table-column label="商品ID" prop="goods_id" align="center" />
+      <el-table-column label="数量" prop="quantity" align="center" />
+      <el-table-column label="单价" prop="unit_price" align="center" />
+      <el-table-column label="小计" prop="subtotal" align="center" />
       <el-table-column align="center">
         <template #default="scope">
           <el-button
@@ -77,77 +64,59 @@ import { ref, onMounted, computed } from 'vue'
 
 // 搜索条件
 const searchOrderId = ref('')
-const searchUserId = ref('')
+const searchGoodsId = ref('')
 // 表格数据
 const tableData = ref([])
 const filteredData = ref([])
-// 原始数据备份 - 订单主表示例数据
+// 原始数据备份 - 订单明细表示例数据
 const originalTableData = [
   {
+    item_id: 'I001',
     order_id: 'O001',
-    user_id: 'U1001',
-    order_time: '2023-10-01 14:30:00',
-    status: '已支付',
-    pay_method: '微信',
-    total_amount: 12999.0,
-    receive_name: '张三',
-    receive_phone: '13800138000',
-    receive_address: '北京市朝阳区某某街道100号',
+    goods_id: 'G001',
+    quantity: 2,
+    unit_price: 1999.0,
+    subtotal: 3998.0,
   },
   {
+    item_id: 'I002',
+    order_id: 'O001',
+    goods_id: 'G002',
+    quantity: 1,
+    unit_price: 2999.0,
+    subtotal: 2999.0,
+  },
+  {
+    item_id: 'I003',
     order_id: 'O002',
-    user_id: 'U1002',
-    order_time: '2023-10-02 09:15:00',
-    status: '待发货',
-    pay_method: '支付宝',
-    total_amount: 4999.0,
-    receive_name: '李四',
-    receive_phone: '13900139000',
-    receive_address: '上海市浦东新区某某路200号',
+    goods_id: 'G003',
+    quantity: 5,
+    unit_price: 599.0,
+    subtotal: 2995.0,
   },
   {
+    item_id: 'I004',
     order_id: 'O003',
-    user_id: 'U1003',
-    order_time: '2023-10-02 16:45:00',
-    status: '待支付',
-    pay_method: null,
-    total_amount: 2499.0,
-    receive_name: '王五',
-    receive_phone: '13700137000',
-    receive_address: '广州市天河区某某大道300号',
+    goods_id: 'G001',
+    quantity: 1,
+    unit_price: 1999.0,
+    subtotal: 1999.0,
   },
   {
+    item_id: 'I005',
     order_id: 'O004',
-    user_id: 'U1001',
-    order_time: '2023-10-03 10:20:00',
-    status: '已发货',
-    pay_method: '微信',
-    total_amount: 3999.0,
-    receive_name: '张三',
-    receive_phone: '13800138000',
-    receive_address: '北京市朝阳区某某街道100号',
+    goods_id: 'G004',
+    quantity: 3,
+    unit_price: 899.0,
+    subtotal: 2697.0,
   },
   {
+    item_id: 'I006',
     order_id: 'O005',
-    user_id: 'U1004',
-    order_time: '2023-10-03 15:10:00',
-    status: '已取消',
-    pay_method: '支付宝',
-    total_amount: 1999.0,
-    receive_name: '赵六',
-    receive_phone: '13600136000',
-    receive_address: '深圳市南山区某某路400号',
-  },
-  {
-    order_id: 'O006',
-    user_id: 'U1005',
-    order_time: '2023-10-04 09:30:00',
-    status: '已完成',
-    pay_method: '银行卡',
-    total_amount: 8999.0,
-    receive_name: '孙七',
-    receive_phone: '13500135000',
-    receive_address: '杭州市西湖区某某街500号',
+    goods_id: 'G005',
+    quantity: 2,
+    unit_price: 1299.0,
+    subtotal: 2598.0,
   },
 ]
 
@@ -155,26 +124,6 @@ const originalTableData = [
 const currentPage = ref(1)
 const pageSize = ref(10)
 const totalItems = ref(0)
-
-// 订单状态标签类型映射
-const getStatusTagType = (status) => {
-  switch (status) {
-    case '已支付':
-      return 'success'
-    case '待支付':
-      return 'warning'
-    case '已发货':
-      return 'primary'
-    case '已完成':
-      return 'info'
-    case '已取消':
-      return 'danger'
-    case '待发货':
-      return 'processing'
-    default:
-      return ''
-  }
-}
 
 // 计算属性：分页后的数据
 const paginatedData = computed(() => {
@@ -191,14 +140,14 @@ onMounted(() => {
 const fetchData = () => {
   let data = [...originalTableData]
 
-  // 订单ID精确查询
+  // 订单ID查询
   if (searchOrderId.value) {
-    data = data.filter((item) => item.order_id === searchOrderId.value)
+    data = data.filter((item) => item.order_id.includes(searchOrderId.value))
   }
 
-  // 用户ID查询
-  if (searchUserId.value) {
-    data = data.filter((item) => item.user_id === searchUserId.value)
+  // 商品ID查询
+  if (searchGoodsId.value) {
+    data = data.filter((item) => item.goods_id.includes(searchGoodsId.value))
   }
 
   // 更新过滤后的数据和总数，重置到第一页
@@ -220,21 +169,21 @@ const handleCurrentChange = (page) => {
 // 重置搜索条件
 const handleReset = () => {
   searchOrderId.value = ''
-  searchUserId.value = ''
+  searchGoodsId.value = ''
   fetchData()
 }
 
-// 新增订单
+// 新增订单明细
 const handleAdd = () => {
-  alert('新增订单功能待实现')
+  alert('新增订单明细功能待实现')
 }
 
 // 编辑和删除方法
 const handleEdit = (index, row) => {
-  alert(`编辑索引: ${index}, 订单ID: ${row.order_id}`)
+  alert(`编辑索引: ${index}, 明细ID: ${row.item_id}`)
 }
 const handleDelete = (index, row) => {
-  alert(`删除索引: ${index}, 订单ID: ${row.order_id}`)
+  alert(`删除索引: ${index}, 明细ID: ${row.item_id}`)
 }
 </script>
 

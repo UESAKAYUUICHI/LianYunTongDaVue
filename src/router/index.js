@@ -43,6 +43,16 @@ const router = createRouter({
           name: 'cargoMg',
           component: () => import('@/view/backEnd/cargoMg.vue'),
         },
+        {
+          path: '/orderMg',
+          name: 'orderMg',
+          component: () => import('@/view/backEnd/orderMg.vue'),
+        },
+        {
+          path: '/orderInfoMg',
+          name: 'orderInfoMg',
+          component: () => import('@/view/backEnd/orderInfoMg.vue'),
+        },
       ],
     },
     {
