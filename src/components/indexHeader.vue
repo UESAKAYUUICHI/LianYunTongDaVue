@@ -1,49 +1,94 @@
 <template>
-  <el-menu
-    :default-active="activeIndex2"
-    class="el-menu-demo"
-    mode="horizontal"
-    text-color="#fff"
-    active-text-color="#fff"
-    background-color="#333333"
-    :collapse="false"
-    unique-opened="true"
-    ellipsis="true"
-    router="true"
-    @select="handleSelect"
-  >
-    <div class="logo">
-      <img src="/img/logo.png" alt="logo图片" />
-    </div>
-    <div class="logoName">
-      <h2 style="color: white; font-size: 30px">联运通达</h2>
-    </div>
-    <el-menu-item index="/index">首页</el-menu-item>
-    <el-menu-item index="/productService">产品服务</el-menu-item>
-    <el-menu-item index="/apiDocument">接口API</el-menu-item>
-    <el-menu-item index="6">大屏展示</el-menu-item>
-    <el-menu-item index="/aboutUs">关于我们</el-menu-item>
-
-    <div class="phone">
-      <el-icon><Phone /></el-icon>联系电话 500-345623
-    </div>
-
-    <el-button @click="jumpToLogin" class="login" type="text"
-      ><el-icon><UserFilled /></el-icon>登录</el-button
+  <div v-if="isNotLogin === true">
+    <el-menu
+      :default-active="activeIndex2"
+      class="el-menu-demo"
+      mode="horizontal"
+      text-color="#fff"
+      active-text-color="#fff"
+      background-color="#333333"
+      :collapse="false"
+      unique-opened="true"
+      ellipsis="true"
+      router="true"
+      @select="handleSelect"
     >
+      <div class="logo">
+        <!-- <img src="/img/logo.png" alt="logo图片" /> -->
+        <img src="../../public/png/testLogo2.png" alt="" />
+      </div>
+      <div class="logoName">
+        <h2 style="color: white; font-size: 30px">联运通达</h2>
+      </div>
+      <el-menu-item index="/index">首页</el-menu-item>
+      <el-menu-item index="/productService">产品服务</el-menu-item>
+      <el-menu-item index="/apiDocument">接口API测试文档</el-menu-item>
+      <el-menu-item index="/showMod">大屏展示</el-menu-item>
+      <el-menu-item index="/aboutUs">关于我们</el-menu-item>
 
-    <el-button @click="jumpToRegister" class="register" type="primary">免费注册</el-button>
-  </el-menu>
+      <div class="phone">
+        <el-icon><Phone /></el-icon>联系电话 500-345623
+      </div>
+
+      <el-button @click="jumpToLogin" class="login" type="text"
+        ><el-icon><UserFilled /></el-icon>登录</el-button
+      >
+
+      <el-button @click="jumpToRegister" class="register" type="primary">免费注册</el-button>
+    </el-menu>
+  </div>
+  <div v-if="isNotLogin === false">
+    <el-menu
+      :default-active="activeIndex2"
+      class="el-menu-demo"
+      mode="horizontal"
+      text-color="#fff"
+      active-text-color="#fff"
+      background-color="#333333"
+      :collapse="false"
+      unique-opened="true"
+      ellipsis="true"
+      router="true"
+      @select="handleSelect"
+    >
+      <div class="logo">
+        <!-- <img src="/img/logo.png" alt="logo图片" /> -->
+        <img src="../../public/png/testLogo2.png" alt="" />
+      </div>
+      <div class="logoName">
+        <h2 style="color: white; font-size: 30px">联运通达</h2>
+      </div>
+      <el-menu-item index="/index">个人主页</el-menu-item>
+      <el-menu-item index="/productService">个人主页</el-menu-item>
+      <el-menu-item index="/apiDocument">个人主页</el-menu-item>
+      <el-menu-item index="6">个人主页</el-menu-item>
+      <el-menu-item index="/aboutUs">个人主页</el-menu-item>
+
+      <el-button class="login" type="text"
+        ><el-icon><UserFilled /></el-icon>用户名称测试</el-button
+      >
+
+      <el-button @click="logOut" class="register" type="primary">注销</el-button>
+    </el-menu>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { jumpToLogin, jumpToRegister } from '../../public/javascript/routerToJump'
 import { ref } from 'vue'
 
+let isNotLogin = ref(true)
 const activeIndex = ref('1')
 const activeIndex2 = ref('1')
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
+}
+
+const logOut = () => {
+  isNotLogin.value = true
+  localStorage.removeItem('token')
+  localStorage.removeItem('userName')
+  jumpToLogin()
 }
 
 defineOptions({

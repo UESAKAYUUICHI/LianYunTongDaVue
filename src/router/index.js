@@ -34,6 +34,11 @@ const router = createRouter({
       component: () => import('@/view/frontEnd/aboutUs.vue'),
     },
     {
+      path: '/showMod',
+      name: 'showMod',
+      component: () => import('@/view/frontEnd/showMod.vue'),
+    },
+    {
       path: '/backHome',
       name: 'backHome',
       component: () => import('@/view/backEnd/backHome.vue'),
@@ -52,6 +57,31 @@ const router = createRouter({
           path: '/orderInfoMg',
           name: 'orderInfoMg',
           component: () => import('@/view/backEnd/orderInfoMg.vue'),
+        },
+        {
+          path: '/cargoCategoryMg',
+          name: 'cargoCategoryMg',
+          component: () => import('@/view/backEnd/cargoCategoryMg.vue'),
+        },
+        {
+          path: '/cargoCategoryMg',
+          name: 'cargoCategoryMg',
+          component: () => import('@/view/backEnd/cargoCategoryMg.vue'),
+        },
+        {
+          path: '/employeeMg',
+          name: '/employeeMg',
+          component: () => import('@/view/backEnd/employeeMg.vue'),
+        },
+        {
+          path: '/housewaveMg',
+          name: '/housewaveMg',
+          component: () => import('@/view/backEnd/housewaveMg.vue'),
+        },
+        {
+          path: '/inventoryMg',
+          name: '/inventoryMg',
+          component: () => import('@/view/backEnd/inventoryMg.vue'),
         },
       ],
     },

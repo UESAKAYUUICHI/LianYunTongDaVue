@@ -42,9 +42,9 @@
                   <span>基础数据管理</span>
                 </template>
                 <el-menu-item-group title="存储全系统通用的基础信息">
-                  <el-menu-item index="">货物分类表</el-menu-item>
+                  <el-menu-item index="/cargoCategoryMg">货物分类表</el-menu-item>
                   <el-menu-item index="">供应商表</el-menu-item>
-                  <el-menu-item index="">员工表</el-menu-item>
+                  <el-menu-item index="/employeeMg">员工表</el-menu-item>
                 </el-menu-item-group>
               </el-sub-menu>
 
@@ -64,8 +64,8 @@
                   <span>仓储管理</span>
                 </template>
                 <el-menu-item-group title="负责货物的存储、出入库操作及库存变动记录">
-                  <el-menu-item index="">仓库表</el-menu-item>
-                  <el-menu-item index="">库存表</el-menu-item>
+                  <el-menu-item index="/housewaveMg">仓库表</el-menu-item>
+                  <el-menu-item index="/inventoryMg">库存表</el-menu-item>
                   <el-menu-item index="">入库单表</el-menu-item>
                   <el-menu-item index="">入库明细表</el-menu-item>
                   <el-menu-item index="">出库单表</el-menu-item>
